@@ -1,0 +1,27 @@
+- name: kdenlive ppa (ppa:kdenlive/kdenlive-stable)
+  become: true
+  apt_repository:
+   repo: ppa:kdenlive/kdenlive-stable
+   state: present
+   update_cache: true
+  tags:
+    - install
+    - productivity
+
+- name: Neovim ppa (ppa:neovim-ppa/unstable)
+  become: true
+  apt_repository:
+    repo: ppa:neovim-ppa/unstable
+    state: present
+    update_cache: true
+  tags:
+    - install
+    - productivity
+
+- name: Install packages
+  become: true
+  apt:
+    name: [ "tmux", "wireshark", "fzf", "kdenlive", "gimp", "xclip", "screenkey", "ripgrep", "shutter" ]
+  tags:
+    - install
+    - productivity
