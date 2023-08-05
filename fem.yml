@@ -11,38 +11,38 @@
         - node
         - zsh
   tasks:
-    - name: Zsh list
-    
-      ansible.builtin.include_tasks: tasks/zsh.yml
-    
-    - name: Node list
-    
-      ansible.builtin.include_tasks: tasks/node.yml
-    
-    - name: NPM basic packages setup
-    
-      ansible.builtin.include_tasks: tasks/npm-packages.yml
-    
+    # - name: Zsh list
+    # 
+    #   ansible.builtin.include_tasks: tasks/zsh.yml
+    # 
+    # - name: Node list
+    # 
+    #   ansible.builtin.include_tasks: tasks/node.yml
+    # 
+    # - name: NPM basic packages setup
+    # 
+    #   ansible.builtin.include_tasks: tasks/npm-packages.yml
+    # 
     - name: SSH setup
 
       ansible.builtin.include_tasks: tasks/ssh.yml
-
-    - name: Git setup
-
-      ansible.builtin.include_tasks: tasks/git-setup.yml
-
-    - name: Productivity-tools setup
-
-      ansible.builtin.include_tasks: tasks/productivity.yml
-
-    - name: Core-tools setup
-
-      ansible.builtin.include_tasks: tasks/core-tools.yml
-
-    - name: Brave-browser setup
-
-      ansible.builtin.include_tasks: tasks/brave-setup.yml
-
-    - name: Cloning dotfiles
-
-      ansible.builtin.include_tasks: tasks/dotfiles.yml
+    #
+    # - name: Git setup
+    #
+    #   ansible.builtin.include_tasks: tasks/git-setup.yml
+    #
+    # - name: Productivity-tools setup
+    #
+    #   ansible.builtin.include_tasks: tasks/productivity.yml
+    #
+    # - name: Core-tools setup
+    #
+    #   ansible.builtin.include_tasks: tasks/core-tools.yml
+    #
+    # - name: Brave-browser setup
+    #
+    #   ansible.builtin.include_tasks: tasks/brave-setup.yml
+    #
+    # - name: Cloning dotfiles
+    #
+    #   ansible.builtin.include_tasks: tasks/dotfiles.yml

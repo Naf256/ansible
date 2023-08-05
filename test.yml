@@ -28,14 +28,20 @@
       tags:
         - ssh
 
-    - name: load ssh key
-      shell: ssh-add ~/.ssh/id_ed25519
-      tags:
-        - ssh
+    - name: Create user tokyoramen
+      user:
+        name: tokyoramen
+        state: present
 
-    - name: Ensure repo is up-to-date
-      ansible.builtin.git:
-        repo: git@github.com:Naf256/hello.git
-        dest: ~/hello
+    - name: Set authorized key took from file
+      authorized_key:
+        user: tokyoramen
+        key: "{{ lookup('file', '/root/.ssh/id_ed25519.pub') }}"
 
-
+    - name: Cloning a git repo
+      git:
+        repo: 'git@github.com:Naf256/nvim.git'
+        dest: '~/nvim'
+        accept_hostkey: yes
+      environment:
+        GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no"
