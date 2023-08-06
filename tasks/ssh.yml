@@ -22,9 +22,13 @@
   tags:
     - ssh
 
-- name: checkout a repo
-  git:
-    repo: "git@github.com:Naf256/hello.git"
-    dest: ./tmp-dotfiles
-    key_file: "{{ source_key }}"
-    update: no
+- name: Create user tokyoramen
+  user:
+    name: tokyoramen
+    state: present
+
+- name: Set authorized key took from file
+  authorized_key:
+    user: tokyoramen
+    key: "{{ lookup('file', '/root/.ssh/id_ed25519.pub') }}"
+

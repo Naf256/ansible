@@ -1,0 +1,7 @@
+- name: Cloning a git repo
+  git:
+    repo: 'git@github.com:Naf256/private.git'
+    dest: '~/private'
+    accept_hostkey: yes
+  environment:
+    GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no"
