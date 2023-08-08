@@ -46,3 +46,8 @@
     - name: Cloning dotfiles
 
       ansible.builtin.include_tasks: tasks/dotfiles.yml
+
+    - name: Go setup
+
+      ansible.builtin.include_tasks: tasks/go-setup.yml
+
