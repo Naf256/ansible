@@ -1,7 +1,7 @@
-- name: Cloning a git repo
+- name: Cloning dotfiles
   git:
-    repo: 'git@github.com:Naf256/private.git'
-    dest: '~/private'
+    repo: 'git@github.com:Naf256/dotfiles.git'
+    dest: '~/dotfiles'
     accept_hostkey: yes
   environment:
     GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no"

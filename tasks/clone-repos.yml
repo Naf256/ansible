@@ -1,2 +1,8 @@
-- name: Cloning all repos
+- name: Getting my work repositories
+  git:
+    repo: 'git@github.com:Naf256/private.git'
+    dest: '~/private'
+    accept_hostkey: yes
+  environment:
+    GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no"
 

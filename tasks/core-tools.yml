@@ -1,6 +1,6 @@
 - name: core programs
   apt:
-    name: ['wget', 'tar', 'gcc', 'g++', 'cmake', 'unzip', 'curl', 'python3', 'python3-pip', 'python3-venv', 'clang', 'htop', 'wavemon', 'neofetch', 'qbittorrent', 'alacritty']
+    name: ['wget', 'tar', 'gcc', 'g++', 'cmake', 'unzip', 'curl', 'python3', 'python3-pip', 'python3-venv', 'clang', 'htop', 'wavemon', 'neofetch', 'qbittorrent', 'alacritty', 'tmux']
   tags:
     - install
     - core
