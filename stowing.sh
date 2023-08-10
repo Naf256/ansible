@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Stowing folders
 myfolders=("alacritty" "nvim" "bash" "tmux" "vim")
 
 bashrc=~/.bashrc
@@ -16,5 +17,17 @@ if [ -e "$bash_profile" ]; then
 fi
 
 for item in "${myfolders[@]}"; do
-	stow $item -t /root
+	stow $item
 done
+
+# make dock transparent
+gsettings set org.gnome.shell.extensions.dash-to-dock background-opacity 0.2
+
+
+# Install ansible and run playbook
+sudo apt-add-repository -y ppa:ansible/ansible
+sudo apt-get update -y
+sudo apt-get install -y curl git software-properties-common ansible
+
+ansible-playbook --ask-vault-pass local.yml
+

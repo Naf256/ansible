@@ -15,13 +15,13 @@
 
       ansible.builtin.include_tasks: tasks/zsh.yml
 
-    # - name: Node list
-    #
-    #   ansible.builtin.include_tasks: tasks/node.yml
-    #
-    # - name: NPM basic packages setup
-    #
-    #   ansible.builtin.include_tasks: tasks/npm-packages.yml
+    - name: Node list
+
+      ansible.builtin.include_tasks: tasks/node.yml
+
+    - name: NPM basic packages setup
+
+      ansible.builtin.include_tasks: tasks/npm-packages.yml
 
     - name: SSH setup
 
@@ -31,30 +31,26 @@
 
       ansible.builtin.include_tasks: tasks/git-setup.yml
 
-    # - name: Productivity-tools setup
-    #
-    #   ansible.builtin.include_tasks: tasks/productivity.yml
-    #
-    # - name: Core-tools setup
-    #
-    #   ansible.builtin.include_tasks: tasks/core-tools.yml
-    #
-    # - name: Brave-browser setup
-    #
-    #   ansible.builtin.include_tasks: tasks/brave-setup.yml
-    #
-    # - name: Cloning Work Repositories
-    #
-    #   ansible.builtin.include_tasks: tasks/clone-repos.yml
-    #
-    # - name: Cloning tmux plugin manager
-    #
-    #   ansible.builtin.include_tasks: tasks/tpm.yml
-    #
-    # - name: Go setup
-    #
-    #   ansible.builtin.include_tasks: tasks/go-setup.yml
-    - name: Stowing repos
+    - name: Productivity-tools setup
 
-      ansible.builtin.include_tasks: tasks/stowing.yml
+      ansible.builtin.include_tasks: tasks/productivity.yml
 
+    - name: Core-tools setup
+
+      ansible.builtin.include_tasks: tasks/core-tools.yml
+
+    - name: Brave-browser setup
+
+      ansible.builtin.include_tasks: tasks/brave-setup.yml
+
+    - name: Cloning Work Repositories
+
+      ansible.builtin.include_tasks: tasks/clone-repos.yml
+
+    - name: Cloning tmux plugin manager
+
+      ansible.builtin.include_tasks: tasks/tpm.yml
+
+    - name: Go setup
+
+      ansible.builtin.include_tasks: tasks/go-setup.yml
