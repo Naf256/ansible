@@ -21,7 +21,7 @@ for item in "${myfolders[@]}"; do
 done
 
 # make dock transparent
-gsettings set org.gnome.shell.extensions.dash-to-dock background-opacity 0.2
+gsettings set org.gnome.shell.extensions.dash-to-dock background-opacity 0.0
 
 
 # Install ansible and run playbook
