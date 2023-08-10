@@ -1,0 +1,4 @@
+- name: Stowing dotfiles to create simlinks
+  shell: ./stowing.sh
+  tags:
+    - stow

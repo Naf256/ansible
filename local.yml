@@ -1,0 +1,60 @@
+- hosts: localhost
+  become_method: su
+  vars:
+    source_key: "./.ssh/id_ed25519"
+    dest_key: "{{ lookup('env', 'HOME' )}}/.ssh/id_ed25519"
+  pre_tasks:
+    - name: Update cache
+      apt:
+        update_cache: true
+      tags:
+        - node
+        - zsh
+  tasks:
+    - name: Zsh list
+
+      ansible.builtin.include_tasks: tasks/zsh.yml
+
+    # - name: Node list
+    #
+    #   ansible.builtin.include_tasks: tasks/node.yml
+    #
+    # - name: NPM basic packages setup
+    #
+    #   ansible.builtin.include_tasks: tasks/npm-packages.yml
+
+    - name: SSH setup
+
+      ansible.builtin.include_tasks: tasks/ssh.yml
+
+    - name: Git setup
+
+      ansible.builtin.include_tasks: tasks/git-setup.yml
+
+    # - name: Productivity-tools setup
+    #
+    #   ansible.builtin.include_tasks: tasks/productivity.yml
+    #
+    # - name: Core-tools setup
+    #
+    #   ansible.builtin.include_tasks: tasks/core-tools.yml
+    #
+    # - name: Brave-browser setup
+    #
+    #   ansible.builtin.include_tasks: tasks/brave-setup.yml
+    #
+    # - name: Cloning Work Repositories
+    #
+    #   ansible.builtin.include_tasks: tasks/clone-repos.yml
+    #
+    # - name: Cloning tmux plugin manager
+    #
+    #   ansible.builtin.include_tasks: tasks/tpm.yml
+    #
+    # - name: Go setup
+    #
+    #   ansible.builtin.include_tasks: tasks/go-setup.yml
+    - name: Stowing repos
+
+      ansible.builtin.include_tasks: tasks/stowing.yml
+
