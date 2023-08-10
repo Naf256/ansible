@@ -21,7 +21,7 @@
 - name: Install packages
   become: true
   apt:
-    name: [ "tmux", "vlc", "firefox", "wireshark", "fzf", "kdenlive", "gimp", "xclip", "screenkey", "ripgrep", "shutter" ]
+    name: [ "tmux", "neovim", "vlc", "firefox", "wireshark", "fzf", "kdenlive", "gimp", "xclip", "screenkey", "ripgrep", "shutter" ]
   tags:
     - install
     - productivity
