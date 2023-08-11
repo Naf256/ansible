@@ -122,7 +122,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export PATH=$PATH:/home/tokyoramen/work/tmp
+export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/go/bin
 export TERM=screen-256color
 export FLYCTL_INSTALL="/home/tokyoramen/.fly"
