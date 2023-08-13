@@ -131,7 +131,5 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 # Change to your name, do not delete backslashes
 export PS1="tokyoRamen\[\e[31m\] \[\e[m\]\[\e[31m\]:\[\e[m\]\[\e[31m\]:\[\e[m\] \[\e[32m\]\w\[\e[m\] \[\e[34m\]»\[\e[m\] "
 
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# swapping capslock with escape key
+setxkbmap -option "caps:swapescape"
