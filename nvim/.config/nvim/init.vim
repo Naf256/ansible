@@ -1,5 +1,6 @@
 lua require('core.init')
 
+set cursorline
 set guifont=SFMono\ NERD\ Font:h13
 set clipboard^=unnamedplus
 set guicursor=i:block
