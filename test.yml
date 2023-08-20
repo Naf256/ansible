@@ -1,7 +1,29 @@
 - hosts: localhost
   become_method: su
   tasks:
-    - name: Stowing dotfiles to create simlinks
-      shell: ./stowing.sh
-      tags:
-        - stow
+    # - name: Install zsh
+    #   apt: name=zsh
+    #   tags:
+    #     - zsh
+    # - name: Change shell
+    #   shell: chsh -s `which zsh`
+    #   tags:
+    #     - zsh
+    # - name: Install oh-my-zsh
+    #   shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    #   tags:
+    #     - zsh
+    # - name: Install zsh plugin autosuggestion
+    #   ansible.builtin.git:
+    #     repo: 'https://github.com/zsh-users/zsh-autosuggestions.git'
+    #     dest: "~/.oh-my-zsh/plugins/zsh-autosuggestions"
+    #   tags:
+    #     - zsh
+    # - name: update our zshrc
+    #   shell: sed -i 's/(git/(git zsh-autosuggestions/' ~/.zshrc
+    #   tags:
+    #     - zsh
+    - name: Add nginx stable repository from PPA and install its signing key on Ubuntu target
+      ansible.builtin.apt_repository:
+        repo: ppa:neovim-ppa/unstable
+        state: present
