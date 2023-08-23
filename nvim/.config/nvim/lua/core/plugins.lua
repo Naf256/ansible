@@ -81,10 +81,10 @@ require('lazy').setup({
 	'kdheepak/lazygit.nvim',
 
 	-- status line
-	{
-		'nvim-lualine/lualine.nvim',
-		dependencies = 'kyazdani42/nvim-web-devicons'
-	},
+	--{
+		--'nvim-lualine/lualine.nvim',
+		--dependencies = 'kyazdani42/nvim-web-devicons'
+	--},
 
 	-- tagbar
 	'simrat39/symbols-outline.nvim',
