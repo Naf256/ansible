@@ -143,14 +143,14 @@ mason_lspconfig.setup_handlers {
 }
 
 require("telescope").setup({
-  defaults = {
-    mappings = {
-      i = {
-        ['<C-u>'] = false,
-        ['<C-d>'] = false,
-      },
-    },
-  },
+	defaults = {
+		mappings = {
+			i = {
+				['<C-u>'] = false,
+				['<C-d>'] = false,
+			}
+		}
+	}
 })
 
 require("Comment").setup()

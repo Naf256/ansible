@@ -18,11 +18,11 @@ require('lazy').setup({
 	'nathom/filetype.nvim',
 
 	-- buffer
-	{
-		'akinsho/bufferline.nvim',
-		dependencies = 'kyazdani42/nvim-web-devicons',
-		opts = {}
-	},
+	-- {
+	-- 	'akinsho/bufferline.nvim',
+	-- 	dependencies = 'kyazdani42/nvim-web-devicons',
+	-- 	opts = {}
+	-- },
 
 	'numToStr/Comment.nvim', -- "gc" to comment visual selection
 
