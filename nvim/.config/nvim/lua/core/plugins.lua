@@ -12,8 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-	'wbthomason/packer.nvim',
-
 	-- starup time optimise
 	'dstein64/vim-startuptime',
 	'lewis6991/impatient.nvim',
@@ -23,6 +21,7 @@ require('lazy').setup({
 	{
 		'akinsho/bufferline.nvim',
 		dependencies = 'kyazdani42/nvim-web-devicons',
+		opts = {}
 	},
 
 	'numToStr/Comment.nvim', -- "gc" to comment visual selection
@@ -81,10 +80,10 @@ require('lazy').setup({
 	'kdheepak/lazygit.nvim',
 
 	-- status line
-	--{
-		--'nvim-lualine/lualine.nvim',
-		--dependencies = 'kyazdani42/nvim-web-devicons'
-	--},
+	{
+		'nvim-lualine/lualine.nvim',
+		dependencies = 'kyazdani42/nvim-web-devicons'
+	},
 
 	-- tagbar
 	'simrat39/symbols-outline.nvim',
@@ -146,8 +145,16 @@ require('lazy').setup({
 	-- 		}
 	-- 	}
 	-- },
+	{
+		"rafamadriz/friendly-snippets",
+		config = function()
+			require("luasnip.loaders.from_vscode").lazy_load()
+		end,
+	},
+
 	-- formating and editing markdown files
 	'sbdchd/neoformat',
+
 	{
 		"folke/zen-mode.nvim",
 		opts = {

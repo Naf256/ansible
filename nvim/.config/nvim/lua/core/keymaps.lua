@@ -3,7 +3,7 @@ vim.g.maplocalleader = ' '
 
 -- keymaps
 -- -- file tree shortcuts
--- vim.keymap.set('n', ';ft', ':Neotree toggle position=left<cr>')
+vim.keymap.set('n', ';ft', ':e.<cr>')
 -- api testing shortcuts
 vim.keymap.set('n', '<leader>at', '<Plug>RestNvim')
 vim.keymap.set('n', '<leader>ap', '<Plug>RestNvimPreview')
