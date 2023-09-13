@@ -27,23 +27,19 @@ require('lazy').setup({
 	'numToStr/Comment.nvim', -- "gc" to comment visual selection
 
 	-- colorschemes (disabled other themes to optimize startup time)
-	'sainnhe/sonokai',
+	-- 'sainnhe/sonokai',
 	--
 	-- { 'sainnhe/edge' },
 
-	--	 { "catppuccin/nvim", as = "catppuccin" }
+	 { "catppuccin/nvim", as = "catppuccin" },
 	--	   'dikiaap/minimalist'
-	--     'kaicataldo/material.vim'
-	--	   ({ 'projekt0n/github-nvim-theme' })
-	--     'marko-cerovac/material.nvim'
+	--     'kaicataldo/material.vim',
+	--	   ({ 'projekt0n/github-nvim-theme' }),
+	--     'marko-cerovac/material.nvim',
 	-- 'tiagovla/tokyodark.nvim',
 
 	'navarasu/onedark.nvim',
 	--	   'arzg/vim-colors-xcode'	
-	-- {'ellisonleao/gruvbox.nvim', priority = 1000 },
-	--
-	--
-	-- { 'sainnhe/gruvbox-material' },
 	-- { 'decaycs/decay.nvim' },
 	-- { 'pineapplegiant/spaceduck' },
 	-- {'IneptusMechanicus/mechanicus.nvim'},
