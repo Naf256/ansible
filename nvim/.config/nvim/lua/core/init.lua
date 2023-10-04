@@ -157,3 +157,9 @@ require("Comment").setup()
 
 --load keybindings
 require("core.keymaps")
+
+P = function(v)
+	print(vim.inspect(v))
+	return v
+
+end

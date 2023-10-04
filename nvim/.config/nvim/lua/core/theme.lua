@@ -1,7 +1,7 @@
 -- themes with special settings
 -- onedark
 -- Lua
-require('onedark').setup  {
+require('onedark').setup({
     -- Main options --
     style = 'darker', -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
     transparent = false,  -- Show/hide background
@@ -38,7 +38,7 @@ require('onedark').setup  {
         undercurl = true,   -- use undercurl instead of underline for diagnostics
         background = true,    -- use background color for virtual text
     },
-}
+})
 
 vim.cmd('colorscheme onedark')
 -- nord

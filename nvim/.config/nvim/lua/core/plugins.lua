@@ -141,6 +141,10 @@ require('lazy').setup({
 	-- 		}
 	-- 	}
 	-- },
+
+	-- installing a local plugin 
+	{ dir = "~/demon.nvim", dev = true },
+
 	{
 		"rafamadriz/friendly-snippets",
 		config = function()

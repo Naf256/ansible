@@ -133,3 +133,13 @@ export PS1="tokyoRamen\[\e[31m\] \[\e[m\]\[\e[31m\]:\[\e[m\]\[\e[31m\]:\[\e[m\] 
 
 # swapping capslock with escape key
 setxkbmap -option "caps:swapescape"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
+# deno
+export DENO_INSTALL="/home/tokyoramen/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
+# Turso
+export PATH="/home/tokyoramen/.turso:$PATH"
