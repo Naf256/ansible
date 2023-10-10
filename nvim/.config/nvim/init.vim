@@ -1,23 +1,15 @@
 lua require('core.init')
 
-syntax enable
 set cursorline
 set guifont=SFMono\ NERD\ Font:h13
 set clipboard^=unnamedplus
 set guicursor=i:block
-
-if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
 
 if has("termguicolors")
 	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 	set termguicolors
 endif
-" let g:doom_one_terminal_colors = v:true
 
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==

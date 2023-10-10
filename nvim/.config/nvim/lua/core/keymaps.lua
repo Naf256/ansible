@@ -28,7 +28,7 @@ vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { de
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 -- c: quick command
-vim.keymap.set('n', ',c', ':lua vim.lsp.buf.rename()<cr>') -- quickly rename a variable
+-- vim.keymap.set('n', ',c', ':lua vim.lsp.buf.rename()<cr>') -- quickly rename a variable
 vim.keymap.set('n', '<leader>ww', ':w<cr>')
 vim.keymap.set('n', '<leader>cW', ':wa<cr>')
 vim.keymap.set('n', '<leader>cE', ':e!<cr>')
@@ -56,9 +56,9 @@ vim.keymap.set('n', '<m-0>', '<c-w>>')
 vim.keymap.set('n', '<m-->', '<c-w>-')
 vim.keymap.set('n', '<m-=>', '<c-w>+')
 -- b: buffer
-vim.keymap.set('n', '<leader>n', ':bn<cr>')
-vim.keymap.set('n', '<leader>p', ':bp<cr>')
-vim.keymap.set('n', '<leader>d', ':bd<cr>')
+vim.keymap.set('n', '<leader>n', ':bn<cr>', { silent = true })
+vim.keymap.set('n', '<leader>p', ':bp<cr>', { silent = true })
+vim.keymap.set('n', '<leader>d', ':bd<cr>', { silent = true })
 -- s: search
 vim.keymap.set('n', '<leader>ss', '/')
 vim.keymap.set('n', '<leader>sw', '/\\<lt>\\><left><left>')

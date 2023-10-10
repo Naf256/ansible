@@ -25,10 +25,11 @@ require('lazy').setup({
 	-- },
 
 	'numToStr/Comment.nvim', -- "gc" to comment visual selection
-
+	-- 'tomorrow-night.vim/tomorrow-night.vim',
 	-- colorschemes (disabled other themes to optimize startup time)
 	-- 'sainnhe/sonokai',
 	--
+	-- 'chriskempson/base16-vim',
 	-- { 'sainnhe/edge' },
 
 	 { "catppuccin/nvim", as = "catppuccin" },
