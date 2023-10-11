@@ -6,3 +6,7 @@ font:
     family: "CaskaydiaCove Nerd Font Mono"
     style: Bold
   size: 16
+colors:
+  cursor:
+   text: '#625e5e'
+   cursor: '#e6e6e6'
