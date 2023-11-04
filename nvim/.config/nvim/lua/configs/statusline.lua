@@ -4,7 +4,7 @@ function M.config()
 	require('lualine').setup {
 		options = {
 			icons_enabled = true,
-			theme = 'onedark', -- based on current vim colorscheme
+			-- theme = 'onedark', -- based on current vim colorscheme
 			-- not a big fan of fancy triangle separators
 			component_separators = { left = '', right = '' },
 			section_separators = { left = '', right = '' },

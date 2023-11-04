@@ -13,6 +13,8 @@ vim.o.undofile		  = true
 vim.o.ignorecase	  = true
 vim.o.smartcase		  = true
 vim.o.completeopt	  = 'menuone,noselect'
+vim.o.background      = 'dark'
+
 
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
@@ -33,6 +35,7 @@ vim.o.shiftwidth      = 4
 vim.o.softtabstop     = 4
 
 require("core.plugins")
+
 -- disable some useless standard plugins to save startup time
 -- these features have been better covered by plugins
 -- vim.g.loaded_matchparen        = 1
@@ -50,6 +53,7 @@ require("core.plugins")
 -- vim.g.loaded_tutor_mode_plugin = 1
 -- vim.g.loaded_remote_plugins    = 1
 require("core.theme")
+vim.cmd([[colorscheme onedark]])
 
 -- Load plugin configs
 -- plugins without extra configs are configured directly here
