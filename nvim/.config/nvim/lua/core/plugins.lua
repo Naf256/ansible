@@ -191,5 +191,9 @@ require('lazy').setup({
 				}
 			},
 		}
-	}
+	},
+
+	-- surround text with   " / ' / ( / { / [
+	'tpope/vim-surround'
+
 })
