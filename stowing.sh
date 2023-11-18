@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#installing stow
+sudo apt-get update -y
+sudo apt install curl software-properties-common stow git -y
+#
 # Stowing folders
 myfolders=("alacritty" "nvim" "bash" "tmux" "vim")
 
@@ -26,8 +30,8 @@ gsettings set org.gnome.shell.extensions.dash-to-dock background-opacity 0.0
 
 # Install ansible and run playbook
 sudo apt-add-repository -y ppa:ansible/ansible
-sudo apt-get update -y
-sudo apt-get install -y curl git software-properties-common ansible
+sudo apt update -y
+sudo apt install -y ansible
 
 sudo ansible-playbook --ask-vault-pass local.yml
 
