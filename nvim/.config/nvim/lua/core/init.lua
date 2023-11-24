@@ -67,6 +67,7 @@ require("configs.git").config()
 require("configs.grammar").config()
 require("nvim-autopairs")
 require("neodev").setup()
+require("configs.generate")
 
 local on_attach = function(_, bufnr)
   -- NOTE: Remember that lua is a real programming language, and as such it is possible

@@ -24,6 +24,8 @@ require('lazy').setup({
 		opts = {}
 	},
 
+	'David-Kunz/gen.nvim', -- integrates with ollama ai
+
 	'numToStr/Comment.nvim', -- "gc" to comment visual selection
 	-- 'tomorrow-night.vim/tomorrow-night.vim',
 	-- colorschemes (disabled other themes to optimize startup time)

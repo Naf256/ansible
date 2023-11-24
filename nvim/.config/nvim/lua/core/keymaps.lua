@@ -2,6 +2,8 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- keymaps
+vim.keymap.set('v', '<leader>]', ':Gen<CR>')
+vim.keymap.set('n', '<leader>]', ':Gen<CR>')
 -- easily format your markdown files
 vim.keymap.set('n', ';fm', ':!fmt % | %<cr>', { silent = true })
 -- -- file tree shortcuts

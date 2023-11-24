@@ -1,9 +1,12 @@
 #!/bin/bash
 
-#installing stow
-sudo apt-get update -y
-sudo apt install curl software-properties-common stow git -y
-#
+# Install ansible and run playbook
+sudo apt update -y
+sudo apt install software-properties-common stow git -y
+sudo apt-add-repository -y ppa:ansible/ansible
+sudo apt update -y
+sudo apt install ansible -y
+
 # Stowing folders
 myfolders=("alacritty" "nvim" "bash" "tmux" "vim")
 
@@ -26,12 +29,6 @@ done
 
 # make dock transparent
 gsettings set org.gnome.shell.extensions.dash-to-dock background-opacity 0.0
-
-
-# Install ansible and run playbook
-sudo apt-add-repository -y ppa:ansible/ansible
-sudo apt update -y
-sudo apt install -y ansible
 
 sudo ansible-playbook --ask-vault-pass local.yml
 
