@@ -196,6 +196,8 @@ require('lazy').setup({
 	},
 
 	-- surround text with   " / ' / ( / { / [
-	'tpope/vim-surround'
+	'tpope/vim-surround',
 
+	-- the ultimate navigation between files
+    { 'ThePrimeagen/harpoon', opts = {} }
 })
