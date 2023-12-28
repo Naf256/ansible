@@ -27,13 +27,15 @@ require('lazy').setup({
 	'David-Kunz/gen.nvim', -- integrates with ollama ai
 
 	'numToStr/Comment.nvim', -- "gc" to comment visual selection
-	-- 'tomorrow-night.vim/tomorrow-night.vim',
 	-- colorschemes (disabled other themes to optimize startup time)
+	'RRethy/nvim-base16',
+	-- 'tomorrow-night.vim/tomorrow-night.vim',
 	-- 'sainnhe/sonokai',
 	--
 	-- 'chriskempson/base16-vim',
 	-- { 'sainnhe/edge' },
- --    { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = {
+	{ 'projekt0n/github-nvim-theme' },
+ --    { 'ellisonleao/gruvbox.nvim', priority = 1000 , config = true, opts = {
 	-- 	terminal_colors = true, -- add neovim terminal colors
 	-- 	undercurl = true,
 	-- 	underline = true,
@@ -199,5 +201,19 @@ require('lazy').setup({
 	'tpope/vim-surround',
 
 	-- the ultimate navigation between files
-    { 'ThePrimeagen/harpoon', opts = {} }
+    { 'ThePrimeagen/harpoon', opts = {} },
+
+	-- debugging setup
+	{ 'rcarriga/nvim-dap-ui', opts = {} },
+
+	{
+		"mfussenegger/nvim-dap",
+		config = function() end,
+	},
+
+	{
+		'leoluz/nvim-dap-go', opts = {}
+    },
+    { 'theHamsta/nvim-dap-virtual-text', opts = {} },
+    { 'nvim-telescope/telescope-dap.nvim', opts = {} }
 })

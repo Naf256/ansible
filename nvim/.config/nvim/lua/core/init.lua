@@ -36,6 +36,40 @@ vim.o.softtabstop     = 4
 
 require("core.plugins")
 
+-- require('dapui').setup()
+-- require('dap-go').setup {
+--   dap_configurations = {
+--     {
+--       -- Must be "go" or it will be ignored by the plugin
+--       type = "go",
+--       name = "Attach remote",
+--       mode = "remote",
+--       request = "attach",
+--     },
+--   },
+--   -- delve configurations
+--   delve = {
+--     -- the path to the executable dlv which will be used for debugging.
+--     -- by default, this is the "dlv" executable on your PATH.
+--     path = "dlv",
+--     -- time to wait for delve to initialize the debug session.
+--     -- default to 20 seconds
+--     initialize_timeout_sec = 20,
+--     -- a string that defines the port to start delve debugger.
+--     -- default to string "${port}" which instructs nvim-dap
+--     -- to start the process in a random available port
+--     port = "${port}",
+--     -- additional args to pass to dlv
+--     args = {},
+--     -- the build flags that are passed to delve.
+--     -- defaults to empty string, but can be used to provide flags
+--     -- such as "-tags=unit" to make sure the test suite is
+--     -- compiled during debugging, for example.
+--     -- passing build flags using args is ineffective, as those are
+--     -- ignored by delve in dap mode.
+--     build_flags = "",
+--   },
+-- }
 -- disable some useless standard plugins to save startup time
 -- these features have been better covered by plugins
 -- vim.g.loaded_matchparen        = 1
@@ -53,7 +87,7 @@ require("core.plugins")
 -- vim.g.loaded_tutor_mode_plugin = 1
 -- vim.g.loaded_remote_plugins    = 1
 require("core.theme")
-vim.cmd([[colorscheme onedark]])
+vim.cmd([[colorscheme github_dark_dimmed]])
 
 -- Load plugin configs
 -- plugins without extra configs are configured directly here

@@ -143,3 +143,4 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 # Turso
 export PATH="/home/tokyoramen/.turso:$PATH"
+. "$HOME/.cargo/env"
