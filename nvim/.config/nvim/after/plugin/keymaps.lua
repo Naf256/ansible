@@ -1,13 +1,9 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
 -- keymaps
-vim.keymap.set('v', '<leader>]', ':Gen<CR>')
-vim.keymap.set('n', '<leader>]', ':Gen<CR>')
+--
 -- easily format your markdown files
 vim.keymap.set('n', ';fm', ':!fmt % | %<cr>', { silent = true })
 -- -- file tree shortcuts
-vim.keymap.set('n', ';ft', ':e.<cr>')
+vim.keymap.set('n', ';ft', ':NvimTreeToggle<cr>')
 -- api testing shortcuts
 vim.keymap.set('n', '<leader>at', '<Plug>RestNvim')
 vim.keymap.set('n', '<leader>ap', '<Plug>RestNvimPreview')
@@ -72,21 +68,10 @@ vim.keymap.set('n', '<leader>sw', '/\\<lt>\\><left><left>')
 -- w: workspace
 vim.keymap.set('n', '<leader>le', vim.diagnostic.open_float)
 vim.keymap.set('n', '<leader>lq', vim.diagnostic.setloclist)
-vim.keymap.set('n', 'K', vim.lsp.buf.hover)
-vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename)
-vim.keymap.set('n', '<leader>lh', vim.lsp.buf.signature_help)
-vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
-
 vim.keymap.set('n', '<leader>lb', ':SymbolsOutline<cr>')
 vim.keymap.set('n', '<f4>', ':SymbolsOutline<cr>')
-
-vim.keymap.set('n', '<leader>gD', vim.lsp.buf.declaration)
-vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition)
-vim.keymap.set('n', '<leader>gt', vim.lsp.buf.type_definition)
-vim.keymap.set('n', '<leader>gi', vim.lsp.buf.implementation)
 vim.keymap.set('n', '<leader>gp', vim.diagnostic.goto_prev)
 vim.keymap.set('n', '<leader>gn', vim.diagnostic.goto_next)
-vim.keymap.set('n', '<leader>gr', vim.lsp.buf.references)
 
 -- vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder)
 -- vim.keymap.set('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder)
@@ -115,5 +100,12 @@ vim.keymap.set('n', '<F12>', ":lua require'dap'.step_out()<cr>")
 vim.keymap.set('n', '<leader>b', ":lua require'dap'.toggle_breakpoint()<cr>")
 vim.keymap.set('n', '<leader>B', ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<cr>")
 vim.keymap.set('n', '<leader>lp', ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<cr>")
-vim.keymap.set('n', '<leader>dr', ":lua require'dap'.repl.open()<cr>")
+vim.keymap.set('n', '<leader>rd', ":lua require'dap'.repl.open()<cr>")
 vim.keymap.set("n", "<leader>td", ":lua require'dap-go'.debug_test()<CR>")
+
+vim.api.nvim_set_keymap('n', '<A-j>', ':m .+1<CR>==', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<A-k>', ':m .-2<CR>==', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<A-j>', '<Esc>:m .+1<CR>==gi', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<A-k>', '<Esc>:m .-2<CR>==gi', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('x', '<A-j>', ':m \'>+1<CR>gv=gv', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('x', '<A-k>', ':m \'<-2<CR>gv=gv', { noremap = true, silent = true })
