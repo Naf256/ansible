@@ -25,7 +25,7 @@ should be good to go
 
 ## Post-Installation
 There is somethings you still need to do manually for make alacritty font
-work. Here I am using [CasKaydiaCoveMono])(https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/CascadiaCode.zip)
+work. Here I am using [CasKaydiaCoveMono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/CascadiaCode.zip)
 Eventually I'll make it part of the script. Just so you don't have to do it
 
 - mv (whatever_font.zip) ~/.local/share/fonts
