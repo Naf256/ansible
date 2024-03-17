@@ -17,6 +17,15 @@ return {
 
 	'navarasu/onedark.nvim',
 
+	{
+		'AlexvZyl/nordic.nvim',
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require 'nordic' .load()
+		end
+	},
+
 	-- language
 	'williamboman/mason.nvim',
 	'williamboman/mason-lspconfig.nvim',
@@ -44,14 +53,6 @@ return {
 	{
 		'nvim-lualine/lualine.nvim',
 		dependencies = 'kyazdani42/nvim-web-devicons',
-		opts = {
-			options = {
-				icons_enabled = true,
-				theme = 'onedark', -- based on current vim colorscheme
-				component_separators = '|',
-				section_separators = '',
-			}
-		}
 	},
 
 	-- tagbar
@@ -102,7 +103,7 @@ return {
 	{
 		"rest-nvim/rest.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
-		opts = {},
+		config = function() end
 	},
 
 	-- file explorer
@@ -141,16 +142,16 @@ return {
     { 'ThePrimeagen/harpoon', opts = {} },
 
     -- debugging setup
-	{ 'rcarriga/nvim-dap-ui', opts = {} },
-
-	{
-		"mfussenegger/nvim-dap",
-		config = function() end,
-	},
-
-	{
-		'leoluz/nvim-dap-go', opts = {}
-    },
-    { 'theHamsta/nvim-dap-virtual-text', opts = {} },
-    { 'nvim-telescope/telescope-dap.nvim', opts = {} }
+	-- { 'rcarriga/nvim-dap-ui', opts = {} },
+	--
+	-- {
+	-- 	"mfussenegger/nvim-dap",
+	-- 	config = function() end,
+	-- },
+	--
+	-- {
+	-- 	'leoluz/nvim-dap-go', opts = {}
+ --    },
+ --    { 'theHamsta/nvim-dap-virtual-text', opts = {} },
+ --    { 'nvim-telescope/telescope-dap.nvim', opts = {} }
 }
