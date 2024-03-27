@@ -137,6 +137,10 @@ setxkbmap -option "caps:swapescape"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
+
+# neovim
+export PATH="$HOME/neovim/bin:$PATH"
+
 # deno
 export DENO_INSTALL="/home/tokyoramen/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"

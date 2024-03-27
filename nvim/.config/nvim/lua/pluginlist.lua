@@ -15,16 +15,21 @@ return {
 
 	'numToStr/Comment.nvim', -- "gc" to comment visual selection
 
+	-- colorschemes
+	--
+	-- 'flrnprz/plastic.vim',
+	'HoNamDuong/hybrid.nvim',
+	'rebelot/kanagawa.nvim',
 	'navarasu/onedark.nvim',
 
-	{
-		'AlexvZyl/nordic.nvim',
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require 'nordic' .load()
-		end
-	},
+	-- {
+	-- 	'AlexvZyl/nordic.nvim',
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require 'nordic' .load()
+	-- 	end
+	-- },
 
 	-- language
 	'williamboman/mason.nvim',
@@ -101,11 +106,18 @@ return {
 
 	-- helps testing rest apis
 	{
-		"rest-nvim/rest.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		config = function() end
+		"vhyrro/luarocks.nvim",
+		priority = 1000,
+		config = true,
 	},
-
+	{
+		"rest-nvim/rest.nvim",
+		ft = "http",
+		dependencies = { "luarocks.nvim" },
+		config = function()
+			require("rest-nvim").setup()
+		end,
+	},
 	-- file explorer
 	{ 'nvim-tree/nvim-tree.lua', opts = {} },
 
