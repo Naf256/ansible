@@ -16,11 +16,10 @@ return {
 	'numToStr/Comment.nvim', -- "gc" to comment visual selection
 
 	-- colorschemes
-	--
-	-- 'flrnprz/plastic.vim',
-	'HoNamDuong/hybrid.nvim',
-	'rebelot/kanagawa.nvim',
+    -- { "briones-gabriel/darcula-solid.nvim", dependencies = {"rktjmp/lush.nvim"} },
 	'navarasu/onedark.nvim',
+
+	-- {"ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = {}},
 
 	-- {
 	-- 	'AlexvZyl/nordic.nvim',
@@ -105,19 +104,19 @@ return {
 	'mattn/emmet-vim',
 
 	-- helps testing rest apis
-	{
-		"vhyrro/luarocks.nvim",
-		priority = 1000,
-		config = true,
-	},
-	{
-		"rest-nvim/rest.nvim",
-		ft = "http",
-		dependencies = { "luarocks.nvim" },
-		config = function()
-			require("rest-nvim").setup()
-		end,
-	},
+	-- {
+	-- 	"vhyrro/luarocks.nvim",
+	-- 	priority = 1000,
+	-- 	config = true,
+	-- },
+	-- {
+	-- 	"rest-nvim/rest.nvim",
+	-- 	ft = "http",
+	-- 	dependencies = { "luarocks.nvim" },
+	-- 	config = function()
+	-- 		require("rest-nvim").setup()
+	-- 	end,
+	-- },
 	-- file explorer
 	{ 'nvim-tree/nvim-tree.lua', opts = {} },
 
@@ -153,6 +152,9 @@ return {
 	-- the ultimate navigation between files
     { 'ThePrimeagen/harpoon', opts = {} },
 
+	--bufferline
+
+	{'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons', opts = {}},
     -- debugging setup
 	-- { 'rcarriga/nvim-dap-ui', opts = {} },
 	--

@@ -5,9 +5,9 @@ vim.keymap.set('n', ';fm', ':!fmt % | %<cr>', { silent = true })
 -- -- file tree shortcuts
 vim.keymap.set('n', ';ft', ':NvimTreeToggle<cr>')
 -- api testing shortcuts
-vim.keymap.set('n', '<leader>at', '<Plug>RestNvim')
-vim.keymap.set('n', '<leader>ap', '<Plug>RestNvimPreview')
-vim.keymap.set('n', '<leader>al', '<Plug>RestNvimLast')
+-- vim.keymap.set('n', '<leader>at', '<Plug>RestNvim')
+-- vim.keymap.set('n', '<leader>ap', '<Plug>RestNvimPreview')
+-- vim.keymap.set('n', '<leader>al', '<Plug>RestNvimLast')
 -- y: telescope
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
 vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
@@ -22,6 +22,7 @@ end, { desc = '[/] Fuzzily search in current buffer]' })
 -- testing lua files
 vim.keymap.set('n', ',t', '<Plug>PlenaryTestFile')
 
+vim.keymap.set('n', '<leader>tc', require('telescope.builtin').colorscheme, { silent = true })
 vim.keymap.set('n', '<leader>sf', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
 vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
 vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
@@ -39,8 +40,8 @@ vim.keymap.set('n', '<leader>cQ', ':q!<cr>')
 vim.keymap.set('n', '<leader>cx', ':x<cr>')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
-vim.keymap.set('n', 'm', 'mj')
-vim.keymap.set('n', '`', '`jzz')
+-- vim.keymap.set('n', 'm', 'mj')
+-- vim.keymap.set('n', '`', '`jzz')
 vim.keymap.set('n', '<leader>z', ':ZenMode<cr>')
 vim.keymap.set('n', '<leader>x', ':!chmod +x %<cr>')
 -- w: window

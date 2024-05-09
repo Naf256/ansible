@@ -1,4 +1,7 @@
-vim.cmd('autocmd FileType javascript setlocal expandtab tabstop=2 shiftwidth=2')
+vim.cmd[[
+  autocmd FileType jsx,tsx,javascript,typescript setlocal expandtab tabstop=2
+]]
+
 -- mapping leader key
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
