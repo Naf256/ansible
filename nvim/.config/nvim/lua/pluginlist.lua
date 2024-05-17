@@ -16,19 +16,11 @@ return {
 	'numToStr/Comment.nvim', -- "gc" to comment visual selection
 
 	-- colorschemes
-    -- { "briones-gabriel/darcula-solid.nvim", dependencies = {"rktjmp/lush.nvim"} },
+
 	'navarasu/onedark.nvim',
 
 	-- {"ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = {}},
 
-	-- {
-	-- 	'AlexvZyl/nordic.nvim',
-	-- 	lazy = false,
-	-- 	priority = 1000,
-	-- 	config = function()
-	-- 		require 'nordic' .load()
-	-- 	end
-	-- },
 
 	-- language
 	'williamboman/mason.nvim',
