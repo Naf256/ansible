@@ -1,0 +1,38 @@
+#!/usr/bin/bash
+
+selected_dir=$(fdfind --type d --max-depth 1 --base-directory "$HOME" | fzf --prompt="Select a directory: ")
+
+# Check if a directory was selected
+if [ -n "$selected_dir" ]; then
+	cd "${HOME}/${selected_dir}" || { echo "failed to change into directory"; exit 1; }
+    # Get the directory name to use as the session name
+    session_name=$(basename "${selected_dir}")
+
+    # Check if we are in a tmux session
+    if [ -n "$TMUX" ]; then
+        # echo "Currently in a tmux session."
+
+        # Check if the session already exists
+        if tmux has-session -t "$session_name" 2>/dev/null; then
+            # echo "Attaching to existing tmux session: $session_name"
+            tmux switch-client -t "$session_name"
+        else
+            # echo "Creating new tmux session: $session_name"
+            tmux new-session -d -s "$session_name"
+            tmux switch-client -t "$session_name"
+        fi
+    else
+        # echo "Not currently in a tmux session."
+
+        # Check if the session already exists
+        if tmux has-session -t "$session_name" 2>/dev/null; then
+            # echo "Attaching to existing tmux session: $session_name"
+            tmux attach-session -t "$session_name"
+        else
+            # echo "Creating new tmux session: $session_name"
+            tmux new-session -s "$session_name"
+        fi
+    fi
+else
+    echo "No directory selected."
+fi

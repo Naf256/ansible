@@ -9,7 +9,7 @@
 - name: Install packages
   become: true
   apt:
-    name: [ "tmux", "neovim", "vlc", "firefox", "wireshark", "fzf", "gimp", "xclip", "screenkey", "ripgrep", "shutter" ]
+    name: [ "tmux", "neovim", "fzf", "xclip", "ripgrep"]
   tags:
     - install
     - productivity

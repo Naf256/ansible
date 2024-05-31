@@ -9,7 +9,7 @@
     global: true
   tags:
     - node
-- name: n 18
-  shell: n 18
+- name: n 20
+  shell: n 20
   tags:
     - node

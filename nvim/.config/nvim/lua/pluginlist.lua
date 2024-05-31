@@ -5,7 +5,6 @@ return {
 	'lewis6991/impatient.nvim',
 	'nathom/filetype.nvim',
 
-	-- buffer
 	-- {
 	-- 	'akinsho/bufferline.nvim',
 	-- 	dependencies = 'kyazdani42/nvim-web-devicons',
@@ -146,7 +145,8 @@ return {
 
 	--bufferline
 
-	{'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons', opts = {}},
+	-- {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons', opts = {}},
+
     -- debugging setup
 	-- { 'rcarriga/nvim-dap-ui', opts = {} },
 	--

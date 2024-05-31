@@ -1,5 +1,9 @@
 - name: Downloading go package
+<<<<<<< HEAD
   shell: sudo wget https://go.dev/dl/go1.21.0.linux-amd64.tar.gz && sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.21.0.linux-amd64.tar.gz
+=======
+  shell: sudo wget https://go.dev/dl/go1.22.3.linux-amd64.tar.gz && sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.22.3.linux-amd64.tar.gz
+>>>>>>> 9507cc0 (initial commit with existing code)
   tags:
     - install
     - go

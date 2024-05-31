@@ -10,7 +10,7 @@
   copy:
     src: "{{ source_key }}"
     dest: "{{ dest_key }}"
-    mode: 0600
+    mode: 0644
   tags:
     - ssh
 
@@ -22,13 +22,15 @@
   tags:
     - ssh
 
-- name: Create user tokyoramen
+- name: Create user tokyaramen
   user:
-    name: tokyoramen
+    name: tokyaramen
     state: present
+  become: true  # Added become privilege
 
-- name: Set authorized key took from file
+- name: Set authorized key
   authorized_key:
-    user: tokyoramen
-    key: "{{ lookup('file', '~/.ssh/id_ed25519.pub') }}"
+    user: tokyaramen
+    key: "{{ dest_key }}.pub"  # Referenced directly
+
 

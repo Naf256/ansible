@@ -126,11 +126,19 @@ fi
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/go/bin
 export TERM=screen-256color
+<<<<<<< HEAD
 export FLYCTL_INSTALL="/home/tokyoramen/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 # Change to your name, do not delete backslashes
 export PS1="tokyoRamen\[\e[31m\] \[\e[m\]\[\e[31m\]:\[\e[m\]\[\e[31m\]:\[\e[m\] \[\e[32m\]\w\[\e[m\] \[\e[34m\]»\[\e[m\] "
+=======
+export FLYCTL_INSTALL="/home/tokyaramen/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
+# Change to your name, do not delete backslashes
+export PS1="tokyaramen\[\e[31m\] \[\e[m\]\[\e[31m\]:\[\e[m\]\[\e[31m\]:\[\e[m\] \[\e[32m\]\w\[\e[m\] \[\e[34m\]»\[\e[m\] "
+>>>>>>> 9507cc0 (initial commit with existing code)
 
 # swapping capslock with escape key
 setxkbmap -option "caps:swapescape"
@@ -146,9 +154,10 @@ export PATH=$BUN_INSTALL/bin:$PATH
 export PATH="$HOME/neovim/bin:$PATH"
 
 # deno
-export DENO_INSTALL="/home/tokyoramen/.deno"
+export DENO_INSTALL="/home/tokyaramen/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
-# Turso
-export PATH="/home/tokyoramen/.turso:$PATH"
-. "$HOME/.cargo/env"
+eval "$(/bin/brew shellenv)"
+eval "$(/bin/brew shellenv)"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
