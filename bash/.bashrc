@@ -123,22 +123,15 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export PATH=$PATH:~/.config/emacs/bin
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/go/bin
 export TERM=screen-256color
-<<<<<<< HEAD
-export FLYCTL_INSTALL="/home/tokyoramen/.fly"
-export PATH="$FLYCTL_INSTALL/bin:$PATH"
-
-# Change to your name, do not delete backslashes
-export PS1="tokyoRamen\[\e[31m\] \[\e[m\]\[\e[31m\]:\[\e[m\]\[\e[31m\]:\[\e[m\] \[\e[32m\]\w\[\e[m\] \[\e[34m\]»\[\e[m\] "
-=======
 export FLYCTL_INSTALL="/home/tokyaramen/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 # Change to your name, do not delete backslashes
 export PS1="tokyaramen\[\e[31m\] \[\e[m\]\[\e[31m\]:\[\e[m\]\[\e[31m\]:\[\e[m\] \[\e[32m\]\w\[\e[m\] \[\e[34m\]»\[\e[m\] "
->>>>>>> 9507cc0 (initial commit with existing code)
 
 # swapping capslock with escape key
 setxkbmap -option "caps:swapescape"
@@ -157,7 +150,8 @@ export PATH="$HOME/neovim/bin:$PATH"
 export DENO_INSTALL="/home/tokyaramen/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
-eval "$(/bin/brew shellenv)"
-eval "$(/bin/brew shellenv)"
-
+# homebrew path
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

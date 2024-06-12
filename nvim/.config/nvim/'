@@ -14,7 +14,7 @@ return {
 	"numToStr/Comment.nvim", -- "gc" to comment visual selection
 
 	-- colorschemes
-	'arzg/vim-colors-xcode',
+
 	"navarasu/onedark.nvim",
 
 	-- {"ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = {}},
@@ -109,8 +109,7 @@ return {
 
 			 -- Useful for getting pretty icons, but requires a Nerd Font.
 			 { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
-    		}
-	},
+    	},
 	-- indent guide
 	"lukas-reineke/indent-blankline.nvim",
 

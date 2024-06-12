@@ -2,7 +2,8 @@ require('options')
 
 require('plugins')
 
-vim.cmd([[colorscheme onedark]])
+-- vim.cmd([[set fileformats=dos]])
+vim.cmd([[colorscheme xcodedark]])
 
 P = function(v)
 	print(vim.inspect(v))
