@@ -8,7 +8,7 @@ sudo apt update -y
 sudo apt install ansible -y
 
 # Stowing folders
-myfolders=("alacritty" "nvim" "bash" "tmux" "vim" "scripts")
+myfolders=("alacritty" "nvim" "bash" "tmux" "vim" "scripts" "zsh")
 
 
 bashrc=~/.bashrc
@@ -32,4 +32,3 @@ done
 # gsettings set org.gnome.shell.extensions.dash-to-dock background-opacity 0.0
 
 sudo ansible-playbook --ask-vault-pass local.yml
-
