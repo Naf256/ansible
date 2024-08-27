@@ -90,8 +90,8 @@ alias upall='sudo apt update && sudo apt upgrade -y && systemctl poweroff'
 
 
 # Shell integrations
-eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+# eval "$(fzf --zsh)"
+# eval "$(zoxide init --cmd cd zsh)"
 
 export PATH=$PATH:~/.config/emacs/bin
 export PATH=$PATH:~/.local/bin
