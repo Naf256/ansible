@@ -10,7 +10,7 @@ return {
 	-- 	dependencies = 'kyazdani42/nvim-web-devicons',
 	-- 	opts = {}
 	-- },
-
+	'prettier/vim-prettier',
 	"numToStr/Comment.nvim", -- "gc" to comment visual selection
 
 	-- colorschemes
@@ -18,10 +18,9 @@ return {
 		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,
-		opts = {},
+		opts = { style = "moon" },
 	},
-	"folke/tokyonight.nvim",
-	'arzg/vim-colors-xcode',
+	"arzg/vim-colors-xcode",
 	"navarasu/onedark.nvim",
 
 	-- {"ellisonleao/gruvbox.nvim", priority = 1000 , config = true, opts = {}},
@@ -144,7 +143,7 @@ return {
 	"pangloss/vim-javascript", --JS support
 	"leafgarland/typescript-vim", --TS support
 	"maxmellon/vim-jsx-pretty", --JS and JSX syntax
-	"jparise/vim-graphql", --GraphQL syntax
+	-- "jparise/vim-graphql", --GraphQL syntax
 	"mattn/emmet-vim",
 
 	-- helps testing rest apis
@@ -154,13 +153,18 @@ return {
 	-- 	config = true,
 	-- },
 	-- {
-	-- 	"rest-nvim/rest.nvim",
-	-- 	ft = "http",
-	-- 	dependencies = { "luarocks.nvim" },
-	-- 	config = function()
-	-- 		require("rest-nvim").setup()
-	-- 	end,
-	-- },
+
+	-- HTTP Rest client Interface
+	--
+	{
+		'mistweaverco/kulala.nvim',
+		config = function()
+			-- Setup is required, even if you don't pass any options
+			require('kulala').setup()
+		end
+	},
+
+
 	-- file explorer
 	{ "nvim-tree/nvim-tree.lua", opts = {} },
 
@@ -213,6 +217,7 @@ return {
 	--    { 'theHamsta/nvim-dap-virtual-text', opts = {} },
 	--    { 'nvim-telescope/telescope-dap.nvim', opts = {} }
 
+	-- I am to ready yet for flashing
 	{
 		"folke/flash.nvim",
 		event = "VeryLazy",

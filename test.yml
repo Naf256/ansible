@@ -6,6 +6,4 @@
         update_cache: true
   tasks:
     - name: Change shell
-      shell: chsh -s `which bash`
-      tags:
-        - zsh
+      ansible.builtin.include_tasks: tasks/zsh.yml
