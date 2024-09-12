@@ -2,8 +2,7 @@ require('options')
 
 require('plugins')
 
-vim.cmd([[colorscheme xcodedark]])
--- vim.cmd([[colorscheme tokyonight]])
+vim.cmd([[colorscheme onedark]])
 
 P = function(v)
 	print(vim.inspect(v))

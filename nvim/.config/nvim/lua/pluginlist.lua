@@ -156,14 +156,8 @@ return {
 
 	-- HTTP Rest client Interface
 	--
-	{
-		'mistweaverco/kulala.nvim',
-		config = function()
-			-- Setup is required, even if you don't pass any options
-			require('kulala').setup()
-		end
-	},
-
+	--
+	{ 'mistweaverco/kulala.nvim', opts = {} },
 
 	-- file explorer
 	{ "nvim-tree/nvim-tree.lua", opts = {} },
